@@ -1,6 +1,7 @@
 using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LightFixtureBehavior : MonoBehaviour
@@ -49,12 +50,13 @@ public class LightFixtureBehavior : MonoBehaviour
         MoveLight();
     }
 
-    public void UpdatePosition(int positionIndex)
+    public void UpdatePosition(int gridPositionIndex)
     {
-        if (positionIndex < possiblePositions.Count &&  positionIndex != currentPoint.positionIndex)
+        foreach (var position in possiblePositions.Where(position => position == gridPositionIndex))
         {
-            currentPoint.positionIndex = possiblePositions[positionIndex];
+            currentPoint.positionIndex = position;
             MoveLight();
+            return;
         }
     }
 
