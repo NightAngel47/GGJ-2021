@@ -437,6 +437,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Light Fixture - 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[1]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[2]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[3]
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4640391808810694708, guid: 2efb18927b2285442805d724ac691632, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -498,6 +518,26 @@ PrefabInstance:
     - target: {fileID: 4640391808810694705, guid: 2efb18927b2285442805d724ac691632, type: 3}
       propertyPath: m_Name
       value: Light Fixture - 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[0]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[1]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[2]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[3]
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4640391808810694708, guid: 2efb18927b2285442805d724ac691632, type: 3}
       propertyPath: m_RootOrder
@@ -572,6 +612,38 @@ PrefabInstance:
     - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
       propertyPath: m_Colors.m_SelectedColor.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 656877454}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSelectedLightFixturePosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LightPositionDisplay, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6993276430025649086, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
       propertyPath: m_Name
@@ -690,6 +762,38 @@ PrefabInstance:
     - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
       propertyPath: m_Colors.m_SelectedColor.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 656877454}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSelectedLightFixturePosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LightPositionDisplay, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6993276430025649086, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
       propertyPath: m_Name
@@ -884,6 +988,38 @@ PrefabInstance:
       propertyPath: m_Colors.m_SelectedColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 656877454}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSelectedLightFixturePosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LightPositionDisplay, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6993276430025649086, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
       propertyPath: m_Name
       value: Fixture Button (7)
@@ -989,6 +1125,26 @@ PrefabInstance:
     - target: {fileID: 4640391808810694705, guid: 2efb18927b2285442805d724ac691632, type: 3}
       propertyPath: m_Name
       value: Light Fixture - 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[1]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[2]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[3]
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4640391808810694708, guid: 2efb18927b2285442805d724ac691632, type: 3}
       propertyPath: m_RootOrder
@@ -1212,6 +1368,7 @@ GameObject:
   - component: {fileID: 656877453}
   - component: {fileID: 656877456}
   - component: {fileID: 656877455}
+  - component: {fileID: 656877454}
   m_Layer: 5
   m_Name: Position Display
   m_TagString: Untagged
@@ -1239,6 +1396,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -40}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &656877454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656877452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80043681ec65dfe4689c978848efa00d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &656877455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1304,6 +1473,38 @@ PrefabInstance:
     - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
       propertyPath: m_Colors.m_SelectedColor.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 656877454}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSelectedLightFixturePosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LightPositionDisplay, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6993276430025649086, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
       propertyPath: m_Name
@@ -1548,6 +1749,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Light Fixture - 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[0]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[1]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[2]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[3]
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4640391808810694708, guid: 2efb18927b2285442805d724ac691632, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1681,6 +1902,26 @@ PrefabInstance:
     - target: {fileID: 4640391808810694705, guid: 2efb18927b2285442805d724ac691632, type: 3}
       propertyPath: m_Name
       value: Light Fixture - 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[1]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[2]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[3]
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4640391808810694708, guid: 2efb18927b2285442805d724ac691632, type: 3}
       propertyPath: m_RootOrder
@@ -1921,6 +2162,34 @@ PrefabInstance:
       propertyPath: m_Colors.m_SelectedColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 656877454}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSelectedLightFixturePosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LightPositionDisplay, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6993276430025649086, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
       propertyPath: m_Name
       value: Fixture Button
@@ -2039,6 +2308,38 @@ PrefabInstance:
       propertyPath: m_Colors.m_SelectedColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 656877454}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSelectedLightFixturePosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LightPositionDisplay, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6993276430025649086, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
       propertyPath: m_Name
       value: Fixture Button (4)
@@ -2156,6 +2457,38 @@ PrefabInstance:
     - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
       propertyPath: m_Colors.m_SelectedColor.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 656877454}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSelectedLightFixturePosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LightPositionDisplay, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6993276430025649086, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
       propertyPath: m_Name
@@ -2345,6 +2678,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Light Fixture - 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[2]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[3]
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4640391808810694708, guid: 2efb18927b2285442805d724ac691632, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2418,6 +2767,38 @@ PrefabInstance:
     - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
       propertyPath: m_Colors.m_SelectedColor.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 656877454}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSelectedLightFixturePosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LightPositionDisplay, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6993276430025649086, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
       propertyPath: m_Name
@@ -2643,6 +3024,38 @@ PrefabInstance:
       propertyPath: m_Colors.m_SelectedColor.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 656877454}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSelectedLightFixturePosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LightPositionDisplay, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993276430025649080, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6993276430025649086, guid: e98b89b49e2040d4f8e98a2fa81c25d2, type: 3}
       propertyPath: m_Name
       value: Fixture Button (8)
@@ -2785,6 +3198,22 @@ PrefabInstance:
     - target: {fileID: 4640391808810694705, guid: 2efb18927b2285442805d724ac691632, type: 3}
       propertyPath: m_Name
       value: Light Fixture - 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[2]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[3]
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4640391808810694708, guid: 2efb18927b2285442805d724ac691632, type: 3}
       propertyPath: m_RootOrder
@@ -3334,6 +3763,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Light Fixture - 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[2]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[3]
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4640391808810694708, guid: 2efb18927b2285442805d724ac691632, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3528,6 +3973,26 @@ PrefabInstance:
     - target: {fileID: 4640391808810694705, guid: 2efb18927b2285442805d724ac691632, type: 3}
       propertyPath: m_Name
       value: Light Fixture - 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[0]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[1]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[2]
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
+      propertyPath: possiblePositions.Array.data[3]
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4640391808810694708, guid: 2efb18927b2285442805d724ac691632, type: 3}
       propertyPath: m_RootOrder

@@ -16,6 +16,9 @@ public class LightFixtureBehavior : MonoBehaviour
     [SerializeField] private List<Color> possibleColor;
 
     public StagePoint CurrentPoint => currentPoint;
+    public List<int> PossiblePositions => possiblePositions;
+    public List<StagePoint.Shapes> PossibleShapes => possibleShapes;
+    public List<Color> PossibleColors => possibleColor;
 
     private void OnEnable()
     {
@@ -37,15 +40,29 @@ public class LightFixtureBehavior : MonoBehaviour
         IsSelectedObject.SetActive(transform.GetSiblingIndex() == newIndex);
     }
 
-    public void UpdateCurrentPoint(int positionIndex, int shapeIndex, int colorIndex)
+    private void UpdateCurrentPoint(int positionIndex, int shapeIndex, int colorIndex)
     {
         currentPoint.positionIndex = possiblePositions[positionIndex];
         currentPoint.shape = possibleShapes[shapeIndex];
         currentPoint.color = possibleColor[colorIndex];
+        
+        MoveLight();
+    }
 
+    public void UpdatePosition(int positionIndex)
+    {
+        if (positionIndex < possiblePositions.Count)
+        {
+            currentPoint.positionIndex = possiblePositions[positionIndex];
+            MoveLight();
+        }
+    }
+
+    private void MoveLight()
+    {
         Vector3 angleVector = (PuzzleManager.Instance.CurrentSceneData.Positions[currentPoint.positionIndex] - transform.position).normalized;
         float angle = Vector3.Angle(transform.up, angleVector) * Mathf.Sign(Vector2.Dot(Vector2.left, angleVector));
-        Debug.DrawRay(transform.position, angleVector, Color.red, 5f, false);
+        //Debug.DrawRay(transform.position, angleVector, Color.red, 5f, false);
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 

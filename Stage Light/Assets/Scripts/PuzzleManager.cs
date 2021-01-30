@@ -7,6 +7,7 @@ public class PuzzleManager : MonoBehaviour
 {
     public static PuzzleManager Instance { get; private set; } = null;
     public static UnityEventInt SelectedFixtureChanged = new UnityEventInt();
+    public static LightFixtureBehavior SelectedFixture { get; private set; } = null;
 
     [SerializeField] private Transform lightsParent = null;
     [SerializeField] private LightFixtureDisplay lightControls = null;
@@ -51,6 +52,7 @@ public class PuzzleManager : MonoBehaviour
 
     public void NewSelectedFixture(int indexOfDataList)
     {
+        SelectedFixture = lightsParent.GetChild(CurrentSceneData.LightIndexes[indexOfDataList]).GetComponent<LightFixtureBehavior>();
         SelectedFixtureChanged?.Invoke(CurrentSceneData.LightIndexes[indexOfDataList]);
     }
 }

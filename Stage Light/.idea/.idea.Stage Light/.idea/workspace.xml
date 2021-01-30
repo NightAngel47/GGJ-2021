@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43beafa8-1f03-47d6-9392-a2993f35a1a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stage Light/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stage Light/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stage Light/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stage Light/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Stage Light/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stage Light/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/StageScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StageScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LightFixtureBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LightFixtureBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LightPositionDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LightPositionDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PuzzleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PuzzleManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +25,10 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/LightFixtureBehavior.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/PuzzleManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PuzzleManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LightFixtureBehavior.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LightPositionDisplay.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nnyHg786nASetdoLzG4flf3LQe" />
@@ -35,6 +38,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -67,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612040067153</updated>
-      <workItem from="1612040073993" duration="504000" />
+      <workItem from="1612040073993" duration="3444000" />
     </task>
     <servers />
   </component>

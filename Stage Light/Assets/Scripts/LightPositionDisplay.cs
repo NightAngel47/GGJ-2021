@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class LightPositionDisplay : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    public void SetSelectedLightFixturePosition(int index)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        LightFixtureBehavior selected = PuzzleManager.SelectedFixture;
+        selected.UpdatePosition(index);
     }
 }
