@@ -8,23 +8,27 @@ public class LightFixtureDisplay : MonoBehaviour
     private TMP_Text textDisplay = null;
     private Slider slider = null;
 
-    private int previousValue = 0;
+    private int previousValue = -1;
 
     private void Awake()
     {
         textDisplay = GetComponentInChildren<TMP_Text>();
         slider = GetComponentInChildren<Slider>();
-        previousValue = (int)slider.value;
+
+        UpdateDisplay();
     }
 
     private void LateUpdate()
     {
         if (previousValue != (int)slider.value)
-        {
-            previousValue = (int)slider.value;
-            textDisplay.text = (previousValue + 1).ToString();
-            PuzzleManager.Instance.NewSelectedFixture(previousValue);
-        }
+            UpdateDisplay();
+    }
+
+    public void UpdateDisplay()
+    {
+        previousValue = (int)slider.value;
+        textDisplay.text = (previousValue + 1).ToString();
+        PuzzleManager.Instance.NewSelectedFixture(previousValue);
     }
 
     public void UpdateSliderMax(int newMax)
