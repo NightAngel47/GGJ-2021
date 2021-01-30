@@ -32,6 +32,12 @@ public class LightFixtureBehavior : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, transform.rotation.eulerAngles.z - Vector3.Angle(transform.up, angleVector));
     }
 
+    public void ChangeSceneData(SceneData newData)
+    {
+        data = newData;
+        UpdateCurrentPoint(0, 0, 0);
+    }
+
     public GameObject CheckForObjectInLight()
     {
         RaycastHit2D hitObj = Physics2D.Raycast(transform.position, transform.up);
