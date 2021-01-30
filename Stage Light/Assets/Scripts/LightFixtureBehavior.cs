@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class LightFixtureBehavior : MonoBehaviour
 {
-    [SerializeField] private SceneData data;
     [SerializeField] private GameObject IsSelectedObject;
 
     [SerializeField] private StagePoint currentPoint;
@@ -18,14 +17,14 @@ public class LightFixtureBehavior : MonoBehaviour
 
     public StagePoint CurrentPoint => currentPoint;
 
-    private void Awake()
-    {
-        UpdateCurrentPoint(0, 0, 0);
-    }
-
     private void OnEnable()
     {
         PuzzleManager.SelectedFixtureChanged.AddListener((newIndex) => NewSelectedLight(newIndex));
+    }
+
+    private void Start()
+    {
+        UpdateCurrentPoint(0, 0, 0);
     }
 
     private void OnDisable()
@@ -44,15 +43,14 @@ public class LightFixtureBehavior : MonoBehaviour
         currentPoint.shape = possibleShapes[shapeIndex];
         currentPoint.color = possibleColor[colorIndex];
 
-        Vector3 angleVector = (data.Positions[currentPoint.positionIndex] - transform.position).normalized;
+        Vector3 angleVector = (PuzzleManager.Instance.CurrentSceneData.Positions[currentPoint.positionIndex] - transform.position).normalized;
         float angle = Vector3.Angle(transform.up, angleVector) * Mathf.Sign(Vector2.Dot(Vector2.left, angleVector));
         Debug.DrawRay(transform.position, angleVector, Color.red, 5f, false);
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 
-    public void ChangeSceneData(SceneData newData)
+    public void ChangeSceneData()
     {
-        data = newData;
         UpdateCurrentPoint(0, 0, 0);
     }
 
