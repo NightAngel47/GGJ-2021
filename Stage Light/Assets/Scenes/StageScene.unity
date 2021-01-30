@@ -814,19 +814,7 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1085788015}
-        m_TargetAssemblyTypeName: LightFixtureDisplay, Assembly-CSharp
-        m_MethodName: ValueChanged
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &785967837
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,6 +859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightsParent: {fileID: 562313653}
+  lightControls: {fileID: 1085788015}
   sceneData:
   - {fileID: 11400000, guid: 81c8d645619ba194492f0cee10f573c7, type: 2}
 --- !u!1001 &922053889
@@ -1471,6 +1460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf5f1c4da0f88dd428a4c7baf4b97e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
   request:
     positionIndex: 0
     shape: 0
@@ -1483,7 +1473,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495737465}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -10.13, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1218175289}
