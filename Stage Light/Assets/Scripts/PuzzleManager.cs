@@ -1,11 +1,12 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PuzzleManager : MonoBehaviour
 {
     public static PuzzleManager Instance { get; private set; } = null;
-    public static Action<int> SelectedFixtureChanged = delegate { };
+    public static UnityEventInt SelectedFixtureChanged = new UnityEventInt();
 
     [SerializeField] private Transform lightsParent = null;
     [SerializeField] private LightFixtureDisplay lightControls = null;
@@ -24,7 +25,7 @@ public class PuzzleManager : MonoBehaviour
         else if (Instance != this)
             Destroy(gameObject);
 
-        SelectedFixtureChanged = delegate { };
+        SelectedFixtureChanged.RemoveAllListeners();
     }
 
     private void Start()
@@ -53,3 +54,6 @@ public class PuzzleManager : MonoBehaviour
         SelectedFixtureChanged?.Invoke(CurrentSceneData.LightIndexes[indexOfDataList]);
     }
 }
+
+[Serializable]
+public class UnityEventInt : UnityEvent<int> { }

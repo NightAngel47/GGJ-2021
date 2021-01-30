@@ -25,12 +25,12 @@ public class LightFixtureBehavior : MonoBehaviour
 
     private void OnEnable()
     {
-        PuzzleManager.SelectedFixtureChanged += (newIndex) => NewSelectedLight(newIndex);
+        PuzzleManager.SelectedFixtureChanged.AddListener((newIndex) => NewSelectedLight(newIndex));
     }
 
     private void OnDisable()
     {
-        PuzzleManager.SelectedFixtureChanged -= (newIndex) => NewSelectedLight(newIndex);
+        PuzzleManager.SelectedFixtureChanged.RemoveListener((newIndex) => NewSelectedLight(newIndex));
     }
 
     private void NewSelectedLight(int newIndex)
