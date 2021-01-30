@@ -1,7 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+using NaughtyAttributes;
+using System;
 using UnityEngine;
 
+[Serializable]
 public struct StagePoint
 {
     public int position;
@@ -10,6 +11,6 @@ public struct StagePoint
     
     public enum Shapes
     {
-
+        Square,
     }
 }
