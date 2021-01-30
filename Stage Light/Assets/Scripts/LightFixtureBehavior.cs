@@ -6,6 +6,7 @@ using UnityEngine;
 public class LightFixtureBehavior : MonoBehaviour
 {
     [SerializeField] private SceneData data;
+    [SerializeField] private GameObject IsSelectedObject;
 
     [SerializeField] private StagePoint currentPoint;
 
@@ -22,14 +23,31 @@ public class LightFixtureBehavior : MonoBehaviour
         UpdateCurrentPoint(0, 0, 0);
     }
 
+    private void OnEnable()
+    {
+        PuzzleManager.SelectedFixtureChanged += (newIndex) => NewSelectedLight(newIndex);
+    }
+
+    private void OnDisable()
+    {
+        PuzzleManager.SelectedFixtureChanged -= (newIndex) => NewSelectedLight(newIndex);
+    }
+
+    private void NewSelectedLight(int newIndex)
+    {
+        IsSelectedObject.SetActive(transform.GetSiblingIndex() == newIndex);
+    }
+
     public void UpdateCurrentPoint(int positionIndex, int shapeIndex, int colorIndex)
     {
-        currentPoint.position = possiblePositions[positionIndex];
+        currentPoint.positionIndex = possiblePositions[positionIndex];
         currentPoint.shape = possibleShapes[shapeIndex];
         currentPoint.color = possibleColor[colorIndex];
 
-        Vector3 angleVector = (data.Positions[currentPoint.position] - transform.position).normalized;
-        transform.rotation = Quaternion.Euler(0f, 0f, transform.rotation.eulerAngles.z - Vector3.Angle(transform.up, angleVector));
+        Vector3 angleVector = (data.Positions[currentPoint.positionIndex] - transform.position).normalized;
+        float angle = Vector3.Angle(transform.up, angleVector) * Mathf.Sign(Vector2.Dot(Vector2.left, angleVector));
+        Debug.DrawRay(transform.position, angleVector, Color.red, 5f, false);
+        transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 
     public void ChangeSceneData(SceneData newData)

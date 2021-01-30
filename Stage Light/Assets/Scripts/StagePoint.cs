@@ -5,7 +5,7 @@ using UnityEngine;
 [Serializable]
 public struct StagePoint
 {
-    public int position;
+    public int positionIndex;
     public Shapes shape;
     public Color color;
     

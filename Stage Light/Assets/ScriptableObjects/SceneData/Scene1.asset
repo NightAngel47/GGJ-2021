@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb466c2740ed70545abce8eda4d905a8, type: 3}
   m_Name: Scene1
   m_EditorClassIdentifier: 
+  lightIndexes: 000000000400000007000000
   positions:
+  - {x: -4.5, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
+  - {x: 4.5, y: 0, z: 0}
