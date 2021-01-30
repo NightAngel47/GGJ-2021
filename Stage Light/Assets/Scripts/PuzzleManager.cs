@@ -25,7 +25,7 @@ public class PuzzleManager : MonoBehaviour
         else if (Instance != this)
             Destroy(gameObject);
 
-        SelectedFixtureChanged.RemoveAllListeners();
+        //SelectedFixtureChanged.RemoveAllListeners();
     }
 
     private void Start()
