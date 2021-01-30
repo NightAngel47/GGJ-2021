@@ -53,6 +53,11 @@ public class PuzzleManager : MonoBehaviour
     {
         SelectedFixtureChanged?.Invoke(CurrentSceneData.LightIndexes[indexOfDataList]);
     }
+
+    public void StartScene()
+    {
+
+    }
 }
 
 [Serializable]
