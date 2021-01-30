@@ -13,10 +13,6 @@ MonoBehaviour:
   m_Name: Scene1
   m_EditorClassIdentifier: 
   lightIndexes: 000000000400000007000000
-  positions:
-  - {x: -4.5, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 4.5, y: 0, z: 0}
   requestsForScene:
   - positionIndex: 1
     shape: 0
