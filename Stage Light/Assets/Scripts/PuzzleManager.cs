@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +20,10 @@ public class PuzzleManager : MonoBehaviour
 
     public SceneData CurrentSceneData => sceneData[currentDataIndex];
 
+    private int currentRequest = 0;
+    private int currentActorIndex = 0;
+    public List<ActorBehavior> ActorsInScene { get; private set; }
+
     private void Awake()
     {
         if (Instance == null)
@@ -31,6 +36,8 @@ public class PuzzleManager : MonoBehaviour
 
     private void Start()
     {
+        ActorsInScene = new List<ActorBehavior>(FindObjectsOfType<ActorBehavior>());
+
         SetCurrentPuzzle();
     }
 
@@ -56,9 +63,23 @@ public class PuzzleManager : MonoBehaviour
         SelectedFixtureChanged?.Invoke(CurrentSceneData.LightIndexes[indexOfDataList]);
     }
 
+    [Button("Start Scene")]
     public void StartScene()
     {
+        ActorBehavior actor = GetCurrentActor(CurrentSceneData.RequestsForScene[0]);
+        actor.MoveOnStage();
 
+        currentRequest = 1;
+    }
+
+    public ActorBehavior GetCurrentActor(StagePoint request)
+    {
+        ActorBehavior actor = ActorsInScene[currentActorIndex];
+        actor.SetRequest(request);
+
+        currentActorIndex = currentActorIndex + 1 != ActorsInScene.Count ? currentActorIndex + 1 : 0;
+
+        return actor;
     }
 
     private void OnDrawGizmos()
