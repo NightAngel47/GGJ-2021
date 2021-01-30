@@ -47,4 +47,9 @@ public class ActorBehavior : MonoBehaviour
         targetPoint = offstagePoint;
         isMoving = true;
     }
+
+    public void SetRequest(StagePoint request)
+    {
+        this.request = request;
+    }
 }

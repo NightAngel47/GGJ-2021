@@ -55,6 +55,11 @@ public class PuzzleManager : MonoBehaviour
         SelectedFixture = lightsParent.GetChild(CurrentSceneData.LightIndexes[indexOfDataList]).GetComponent<LightFixtureBehavior>();
         SelectedFixtureChanged?.Invoke(CurrentSceneData.LightIndexes[indexOfDataList]);
     }
+
+    public void StartScene()
+    {
+
+    }
 }
 
 [Serializable]
