@@ -51,7 +51,7 @@ public class LightFixtureBehavior : MonoBehaviour
 
     public void UpdatePosition(int positionIndex)
     {
-        if (positionIndex < possiblePositions.Count)
+        if (positionIndex < possiblePositions.Count &&  positionIndex != currentPoint.positionIndex)
         {
             currentPoint.positionIndex = possiblePositions[positionIndex];
             MoveLight();
@@ -61,8 +61,8 @@ public class LightFixtureBehavior : MonoBehaviour
     private void MoveLight()
     {
         Vector3 angleVector = (PuzzleManager.Instance.CurrentSceneData.Positions[currentPoint.positionIndex] - transform.position).normalized;
-        float angle = Vector3.Angle(transform.up, angleVector) * Mathf.Sign(Vector2.Dot(Vector2.left, angleVector));
-        //Debug.DrawRay(transform.position, angleVector, Color.red, 5f, false);
+        float angle = Vector3.Angle(Vector3.up, angleVector) * Mathf.Sign(Vector2.Dot(Vector2.left, angleVector));
+        Debug.DrawRay(transform.position, angleVector * 10, Color.red, 5f, false);
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 

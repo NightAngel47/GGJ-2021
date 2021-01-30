@@ -60,6 +60,14 @@ public class PuzzleManager : MonoBehaviour
     {
 
     }
+
+    private void OnDrawGizmos()
+    {
+        foreach (Vector3 point in CurrentSceneData.Positions)
+        {
+            Gizmos.DrawWireSphere(point, 0.5f);
+        }
+    }
 }
 
 [Serializable]
