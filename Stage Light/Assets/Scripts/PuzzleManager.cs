@@ -93,8 +93,6 @@ public class PuzzleManager : MonoBehaviour
         ActorBehavior actor = GetCurrentActor(Requests.Dequeue());
         actor.MoveOnStage();
 
-        yield return new WaitWhile(() => actor.IsMoving);
-
         if (ProgrammedLights.Count != 0)
         {
             ProgrammedLightFixture light = ProgrammedLights.Dequeue();
@@ -120,9 +118,13 @@ public class PuzzleManager : MonoBehaviour
             // Fail
         }
 
+        yield return new WaitWhile(() => actor.IsMoving);
+
         yield return new WaitForSeconds(1f);
 
         actor.MoveOffStage();
+
+        yield return new WaitWhile(() => actor.IsMoving);
 
         if (Requests.Count != 0)
             StartCoroutine(ContinueSceneSequence());
