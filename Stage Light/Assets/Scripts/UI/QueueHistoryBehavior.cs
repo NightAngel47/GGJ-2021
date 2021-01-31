@@ -17,13 +17,14 @@ public class QueueHistoryBehavior : MonoBehaviour
     private void OnEnable()
     {
         PuzzleManager.NewLightQueued.AddListener((programmedLight) => AddElement(programmedLight.fixture.transform.GetSiblingIndex(), programmedLight.point.positionIndex, programmedLight.point.color));
-        PuzzleManager.FirstLightDequeued.AddListener(() => )
+        PuzzleManager.FirstLightDequeued.AddListener(() => RemoveFirstElement());
         PuzzleManager.LastLightUnqueued.AddListener(() => RemoveLastElement());
     }
 
     private void OnDisable()
     {
         PuzzleManager.NewLightQueued.RemoveListener((programmedLight) => AddElement(programmedLight.fixture.transform.GetSiblingIndex(), programmedLight.point.positionIndex, programmedLight.point.color));
+        PuzzleManager.FirstLightDequeued.RemoveListener(() => RemoveFirstElement());
         PuzzleManager.LastLightUnqueued.RemoveListener(() => RemoveLastElement());
     }
 
@@ -32,7 +33,7 @@ public class QueueHistoryBehavior : MonoBehaviour
         undoButton.interactable = false;
     }
 
-    public void AddElement(int fixtureIndex, int positionIndex, Color color)
+    private void AddElement(int fixtureIndex, int positionIndex, Color color)
     {
         contentTransform.sizeDelta = new Vector2(contentTransform.rect.width + ElementWidth, 0f);
         GameObject newElement = Instantiate<GameObject>(historyElement, contentTransform);
@@ -48,11 +49,15 @@ public class QueueHistoryBehavior : MonoBehaviour
             undoButton.interactable = true;
     }
 
-    public void RemoveFirstElement()
+    private void RemoveFirstElement()
     {
         if (contentTransform.childCount > 0)
         {
-            Destroy(contentTransform.GetChild(contentTransform.childCount - 1).gameObject);
+            Destroy(contentTransform.GetChild(0).gameObject);
+            for (int index = 0; index < contentTransform.childCount; index++)
+            {
+                contentTransform.GetChild(index).GetComponent<RectTransform>().localPosition = new Vector3(ElementWidth * (index - 1), 0f);
+            }
             contentTransform.sizeDelta = new Vector2(contentTransform.rect.width - ElementWidth, 0f);
         }
 
@@ -60,7 +65,7 @@ public class QueueHistoryBehavior : MonoBehaviour
             undoButton.interactable = false;
     }
 
-    public void RemoveLastElement()
+    private void RemoveLastElement()
     {
         if (contentTransform.childCount > 0)
         {
