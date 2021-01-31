@@ -62,7 +62,6 @@ public class PuzzleManager : MonoBehaviour
 
         SetCurrentPuzzle();
         uiControls.SetActive(false);
-        Invoke(nameof(StartDryRun), sceneStartDelay);
     }
 
     private void OnDestroy()
@@ -81,6 +80,15 @@ public class PuzzleManager : MonoBehaviour
         SelectedFixtureChanged?.Invoke(0);
 
         ProgrammedLights = new Queue<ProgrammedLightFixture>();
+
+        Invoke(nameof(StartDryRun), sceneStartDelay);
+    }
+
+    public void SetNextPuzzle()
+    {
+        Debug.Log(currentDataIndex < sceneData.Count ? currentDataIndex + 1 : 0);
+        currentDataIndex = currentDataIndex < sceneData.Count ? currentDataIndex + 1 : 0;
+        SetCurrentPuzzle();
     }
 
     public void NewSelectedFixture(int indexOfDataList)
@@ -91,9 +99,11 @@ public class PuzzleManager : MonoBehaviour
 
     public void QueueSelectedLight()
     {
+        Debug.Log(1);
         ProgrammedLightFixture programmedLight = new ProgrammedLightFixture(SelectedFixture, SelectedFixture.CurrentPoint);
         ProgrammedLights.Enqueue(new ProgrammedLightFixture(SelectedFixture, SelectedFixture.CurrentPoint));
         NewLightQueued?.Invoke(programmedLight);
+        Debug.Log(3);
 
     }
 
@@ -119,7 +129,7 @@ public class PuzzleManager : MonoBehaviour
     {
         Requests = new Queue<StagePoint>(CurrentSceneData.RequestsForScene);
 
-        StartCoroutine(PerformanceSequence());
+        StartCoroutine(PerformanceSequence(true));
     }
 
     private IEnumerator DryRunSequence()
@@ -150,7 +160,7 @@ public class PuzzleManager : MonoBehaviour
         }
     }
 
-    private IEnumerator PerformanceSequence()
+    private IEnumerator PerformanceSequence(bool canSucceed)
     {
         uiControls.SetActive(false);
         globalLight.intensity = houseLightIntensity.x;
@@ -185,13 +195,13 @@ public class PuzzleManager : MonoBehaviour
             else
             {
                 Debug.Log("Fail: Doesn't Match");
-                // Fail
+                canSucceed = false;
             }
         }
         else
         {
             Debug.Log("Fail: No More Programmed Lights");
-            // Fail
+            canSucceed = false;
         }
 
         yield return new WaitForSeconds(1f);
@@ -202,13 +212,17 @@ public class PuzzleManager : MonoBehaviour
 
         if (Requests.Count != 0)
         {
-            StartCoroutine(PerformanceSequence());
+            StartCoroutine(PerformanceSequence(canSucceed));
         }
         else
         {
             uiControls.SetActive(true);
-            globalLight.intensity = houseLightIntensity.y;
             ClearQueue?.Invoke();
+            if (canSucceed)
+            {
+                globalLight.intensity = houseLightIntensity.y;
+                SetNextPuzzle();
+            }
         }
     }
 

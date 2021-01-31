@@ -2612,6 +2612,7 @@ MonoBehaviour:
   lightControls: {fileID: 1085788015}
   globalLight: {fileID: 1001220351}
   houseLightIntensity: {x: 0.2, y: 1}
+  sceneStartDelay: 0.5
   sceneData:
   - {fileID: 11400000, guid: 81c8d645619ba194492f0cee10f573c7, type: 2}
 --- !u!1001 &877626724
@@ -6892,9 +6893,37 @@ PrefabInstance:
     m_TransformParent: {fileID: 148403026}
     m_Modifications:
     - target: {fileID: 7447202062493947670, guid: 640fc3638ef3ac64295dfc47590a9d0f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447202062493947670, guid: 640fc3638ef3ac64295dfc47590a9d0f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447202062493947670, guid: 640fc3638ef3ac64295dfc47590a9d0f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 785967839}
+    - target: {fileID: 7447202062493947670, guid: 640fc3638ef3ac64295dfc47590a9d0f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447202062493947670, guid: 640fc3638ef3ac64295dfc47590a9d0f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447202062493947670, guid: 640fc3638ef3ac64295dfc47590a9d0f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447202062493947670, guid: 640fc3638ef3ac64295dfc47590a9d0f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447202062493947670, guid: 640fc3638ef3ac64295dfc47590a9d0f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7447202062493947671, guid: 640fc3638ef3ac64295dfc47590a9d0f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
