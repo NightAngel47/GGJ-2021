@@ -1,8 +1,10 @@
+using System;
 using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class LightFixtureBehavior : MonoBehaviour
 {
@@ -20,6 +22,13 @@ public class LightFixtureBehavior : MonoBehaviour
     public List<int> PossiblePositions => possiblePositions;
     public List<StagePoint.Shapes> PossibleShapes => possibleShapes;
     public List<Color> PossibleColors => possibleColor;
+    
+    private Light2D pointLight;
+
+    private void Awake()
+    {
+        pointLight = GetComponentInChildren<Light2D>();
+    }
 
     private void OnEnable()
     {
@@ -45,8 +54,9 @@ public class LightFixtureBehavior : MonoBehaviour
     {
         currentPoint.positionIndex = possiblePositions[positionIndex];
         currentPoint.shape = possibleShapes[shapeIndex];
-        currentPoint.color = possibleColor[colorIndex];
+        //currentPoint.color = possibleColor[colorIndex];
         
+        UpdateColor(colorIndex);
         MoveLight();
     }
 
@@ -58,6 +68,12 @@ public class LightFixtureBehavior : MonoBehaviour
             MoveLight();
             return;
         }
+    }
+
+    public void UpdateColor(int colorIndex)
+    {
+        currentPoint.color = possibleColor[colorIndex];
+        pointLight.color = currentPoint.color;
     }
 
     private void MoveLight()

@@ -69,7 +69,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 41603253
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -127,7 +127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d87a66360ef8dfa44b1444d28b2a54e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 81c8d645619ba194492f0cee10f573c7, type: 2}
   IsSelectedObject: {fileID: 5774215347294209061}
   currentPoint:
     positionIndex: 0
@@ -136,7 +135,7 @@ MonoBehaviour:
   possiblePositions: 00000000
   possibleShapes: 00000000
   possibleColor:
-  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &5774215347294209061
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +206,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 41603253
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
@@ -268,7 +267,7 @@ MonoBehaviour:
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_LightVolumeOpacity: 0
+  m_LightVolumeOpacity: 0.25
   m_ApplyToSortingLayers: 49fc3e10000000008fec9a9f
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0

@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="ActorBehavior.cs" t="Include" />
+          <e p="LightColorDisplay.cs" t="Include" />
           <e p="LightFixtureBehavior.cs" t="Include" />
           <e p="LightFixtureDisplay.cs" t="Include" />
           <e p="LightPositionDisplay.cs" t="Include" />

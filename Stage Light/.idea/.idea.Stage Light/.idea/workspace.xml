@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43beafa8-1f03-47d6-9392-a2993f35a1a5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stage Light/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stage Light/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Stage Light/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stage Light/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LightPositionDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LightPositionDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Light Fixture.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Light Fixture.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Rendering/2D Renderer Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Rendering/2D Renderer Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StageScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StageScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LightFixtureBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LightFixtureBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/stage 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/stage 1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +29,9 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PuzzleManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LightFixtureBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LightPositionDisplay.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LightFixtureBehavior.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LightColorDisplay.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nnyHg786nASetdoLzG4flf3LQe" />
@@ -69,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612040067153</updated>
-      <workItem from="1612040073993" duration="9644000" />
+      <workItem from="1612040073993" duration="12397000" />
     </task>
     <servers />
   </component>
