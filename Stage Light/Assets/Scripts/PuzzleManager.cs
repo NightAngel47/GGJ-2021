@@ -97,10 +97,10 @@ public class PuzzleManager : MonoBehaviour
 
         ProgrammedLights = new Queue<ProgrammedLightFixture>();
 
-        print("here");
         // show dry run popup
         popupBackground.transform.gameObject.SetActive(true);
         popupPanels[(int)PopupPanelType.DryRun].SetActive(true);
+        uiControls.SetActive(false);
     }
 
     public void SetNextPuzzle()
@@ -239,7 +239,6 @@ public class PuzzleManager : MonoBehaviour
         }
         else
         {
-            uiControls.SetActive(true);
             ProgrammedLights.Clear();
             ClearQueue?.Invoke();
             if (canSucceed)
