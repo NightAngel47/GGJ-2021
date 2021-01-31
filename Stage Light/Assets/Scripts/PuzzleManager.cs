@@ -97,7 +97,8 @@ public class PuzzleManager : MonoBehaviour
 
         ProgrammedLights = new Queue<ProgrammedLightFixture>();
 
-        // show initial dry run popup
+        print("here");
+        // show dry run popup
         popupBackground.transform.gameObject.SetActive(true);
         popupPanels[(int)PopupPanelType.DryRun].SetActive(true);
     }
