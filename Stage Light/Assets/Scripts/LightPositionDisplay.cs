@@ -38,10 +38,11 @@ public class LightPositionDisplay : MonoBehaviour
         LightFixtureBehavior selected = PuzzleManager.SelectedFixture;
         for(int i = 0; i < numpadButtons.Count; ++i)
         {
-            foreach (var pos in selected.PossiblePositions.Where(pos => i == pos))
+            if (selected.PossiblePositions.All(pos => i != pos)) continue;
+            numpadButtons[i].interactable = true;
+            if (i == selected.CurrentPoint.positionIndex)
             {
-                numpadButtons[i].interactable = true;
-                break;
+                numpadButtons[i].Select();
             }
         }
     }

@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="43beafa8-1f03-47d6-9392-a2993f35a1a5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Stage Light/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stage Light/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StageScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StageScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LightFixtureBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LightFixtureBehavior.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/LightPositionDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LightPositionDisplay.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612040067153</updated>
-      <workItem from="1612040073993" duration="8445000" />
+      <workItem from="1612040073993" duration="9644000" />
     </task>
     <servers />
   </component>
