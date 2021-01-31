@@ -83,7 +83,6 @@ public class PuzzleManager : MonoBehaviour
         ProgrammedLights.Enqueue(new ProgrammedLightFixture(SelectedFixture, SelectedFixture.CurrentPoint));
     }
 
-    [Button("Dry Run")]
     public void StartDryRun()
     {
         Requests = new Queue<StagePoint>(CurrentSceneData.RequestsForScene);

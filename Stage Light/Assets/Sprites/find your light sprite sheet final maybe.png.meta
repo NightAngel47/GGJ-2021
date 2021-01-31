@@ -1,7 +1,52 @@
 fileFormatVersion: 2
 guid: b58a014a302977e4fbd8db9a63951b65
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8838128938851444240
+    second: find your light sprite sheet final maybe_0
+  - first:
+      213: 8089069235272416311
+    second: find your light sprite sheet final maybe_1
+  - first:
+      213: -6847794926135572569
+    second: find your light sprite sheet final maybe_2
+  - first:
+      213: -496305577492167064
+    second: find your light sprite sheet final maybe_3
+  - first:
+      213: 8164089175067780971
+    second: find your light sprite sheet final maybe_4
+  - first:
+      213: 8974730793034292201
+    second: find your light sprite sheet final maybe_5
+  - first:
+      213: 2561250372482194504
+    second: find your light sprite sheet final maybe_6
+  - first:
+      213: -6195677648129031620
+    second: find your light sprite sheet final maybe_7
+  - first:
+      213: 6171314399168024929
+    second: find your light sprite sheet final maybe_8
+  - first:
+      213: -4594935165825857202
+    second: find your light sprite sheet final maybe_9
+  - first:
+      213: -2684993910886077948
+    second: find your light sprite sheet final maybe_10
+  - first:
+      213: -2252475662807701390
+    second: find your light sprite sheet final maybe_11
+  - first:
+      213: -2067272914932100569
+    second: find your light sprite sheet final maybe_12
+  - first:
+      213: 319284318175024249
+    second: find your light sprite sheet final maybe_13
+  - first:
+      213: 1575593647860406534
+    second: find your light sprite sheet final maybe_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +86,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 400
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -65,7 +110,31 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -77,7 +146,322 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: find your light sprite sheet final maybe_0
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 3089
+        width: 460
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0162757817757aa70800000000000000
+      internalID: 8838128938851444240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: find your light sprite sheet final maybe_1
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 3093
+        width: 394
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73cf3fb9c95224070800000000000000
+      internalID: 8089069235272416311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: find your light sprite sheet final maybe_2
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 3093
+        width: 362
+        height: 486
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a787fcbbceb7f0a0800000000000000
+      internalID: -6847794926135572569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: find your light sprite sheet final maybe_3
+      rect:
+        serializedVersion: 2
+        x: 2603
+        y: 3139
+        width: 396
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866c881f4b4cc19f0800000000000000
+      internalID: -496305577492167064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: find your light sprite sheet final maybe_4
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 1507
+        width: 468
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67e68a79dbac4170800000000000000
+      internalID: 8164089175067780971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: find your light sprite sheet final maybe_5
+      rect:
+        serializedVersion: 2
+        x: 2735
+        y: 2095
+        width: 36
+        height: 498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb91992b16ac8c70800000000000000
+      internalID: 8974730793034292201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: find your light sprite sheet final maybe_6
+      rect:
+        serializedVersion: 2
+        x: 3149
+        y: 2087
+        width: 268
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c53a8c4a36b8320800000000000000
+      internalID: 2561250372482194504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: find your light sprite sheet final maybe_7
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 1861
+        width: 234
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3201705108840aa0800000000000000
+      internalID: -6195677648129031620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: find your light sprite sheet final maybe_8
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 581
+        width: 486
+        height: 528
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 161d9afbfb9e4a550800000000000000
+      internalID: 6171314399168024929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: find your light sprite sheet final maybe_9
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 581
+        width: 436
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49cffacfc28b30c0800000000000000
+      internalID: -4594935165825857202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: find your light sprite sheet final maybe_10
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 581
+        width: 486
+        height: 528
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a6c85834cfcbad0800000000000000
+      internalID: -2684993910886077948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: find your light sprite sheet final maybe_11
+      rect:
+        serializedVersion: 2
+        x: 2509
+        y: 1095
+        width: 496
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278622d91599db0e0800000000000000
+      internalID: -2252475662807701390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: find your light sprite sheet final maybe_12
+      rect:
+        serializedVersion: 2
+        x: 2466
+        y: 62
+        width: 566
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7229fab9c329f43e0800000000000000
+      internalID: -2067272914932100569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: find your light sprite sheet final maybe_13
+      rect:
+        serializedVersion: 2
+        x: 3018
+        y: 586
+        width: 482
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974dc2f45635e6400800000000000000
+      internalID: 319284318175024249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: find your light sprite sheet final maybe_14
+      rect:
+        serializedVersion: 2
+        x: 3484
+        y: 108
+        width: 546
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609d41b2312add510800000000000000
+      internalID: 1575593647860406534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
