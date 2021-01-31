@@ -240,6 +240,7 @@ public class PuzzleManager : MonoBehaviour
         else
         {
             uiControls.SetActive(true);
+            ProgrammedLights.Clear();
             ClearQueue?.Invoke();
             if (canSucceed)
             {
