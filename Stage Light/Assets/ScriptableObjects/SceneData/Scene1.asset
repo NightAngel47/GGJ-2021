@@ -22,23 +22,41 @@ MonoBehaviour:
   - {r: 0.9725491, g: 0.15294118, b: 0.20784315, a: 1}
   - {r: 1, g: 0.87843144, b: 0.30588236, a: 1}
   positions:
-  - {x: -7, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 7, y: 0, z: 0}
-  - {x: -5.5, y: 0.5, z: 0}
-  - {x: 0, y: 0.5, z: 0}
-  - {x: 5.5, y: 0.5, z: 0}
-  - {x: -4, y: 1, z: 0}
+  - {x: -6.5, y: 0.2, z: 0}
+  - {x: 0, y: 0.2, z: 0}
+  - {x: 6.5, y: 0.2, z: 0}
+  - {x: -4.5, y: 1, z: 0}
   - {x: 0, y: 1, z: 0}
-  - {x: 4, y: 1, z: 0}
-  lightIndexes: 000000000400000007000000
+  - {x: 4.5, y: 1, z: 0}
+  - {x: -2.5, y: 1.4, z: 0}
+  - {x: 0, y: 1.4, z: 0}
+  - {x: 2.5, y: 1.4, z: 0}
+  lightIndexes: 000000000100000002000000030000000400000005000000060000000700000008000000
   requestsForScene:
-  - positionIndex: 1
-    shape: 0
-    color: {r: 0, g: 0.35686275, b: 0.6, a: 1}
-  - positionIndex: 2
-    shape: 0
-    color: {r: 0.47450984, g: 0.28627452, b: 0.5411765, a: 1}
   - positionIndex: 0
     shape: 0
+    color: {r: 0, g: 0.35686275, b: 0.6, a: 1}
+  - positionIndex: 1
+    shape: 0
+    color: {r: 0.47450984, g: 0.28627452, b: 0.5411765, a: 1}
+  - positionIndex: 2
+    shape: 0
     color: {r: 0.9725491, g: 0.15294118, b: 0.20784315, a: 1}
+  - positionIndex: 3
+    shape: 0
+    color: {r: 1, g: 0.87843144, b: 0.30588236, a: 1}
+  - positionIndex: 4
+    shape: 0
+    color: {r: 0.47450984, g: 0.28627452, b: 0.5411765, a: 1}
+  - positionIndex: 5
+    shape: 0
+    color: {r: 0.16078432, g: 0.5647059, b: 0.19215688, a: 1}
+  - positionIndex: 6
+    shape: 0
+    color: {r: 0.9803922, g: 0.78823537, b: 0.58431375, a: 1}
+  - positionIndex: 7
+    shape: 0
+    color: {r: 0.9960785, g: 0.46274513, b: 0, a: 1}
+  - positionIndex: 8
+    shape: 0
+    color: {r: 0.7411765, g: 0.8117648, b: 0.90196085, a: 1}
