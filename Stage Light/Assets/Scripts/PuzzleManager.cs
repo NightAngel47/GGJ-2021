@@ -93,9 +93,10 @@ public class PuzzleManager : MonoBehaviour
         ActorBehavior actor = GetCurrentActor(Requests.Dequeue());
         actor.MoveOnStage();
 
+        ProgrammedLightFixture light = null;
         if (ProgrammedLights.Count != 0)
         {
-            ProgrammedLightFixture light = ProgrammedLights.Dequeue();
+            light = ProgrammedLights.Dequeue();
 
             SelectedFixture = light.fixture;
             SelectedFixtureChanged?.Invoke(light.fixture.transform.GetSiblingIndex());
@@ -103,7 +104,12 @@ public class PuzzleManager : MonoBehaviour
             light.fixture.UpdatePosition(light.point.positionIndex);
             // Shape
             light.fixture.UpdateColor(light.fixture.PossibleColors.IndexOf(light.point.color));
+        }
 
+        yield return new WaitWhile(() => actor.IsMoving);
+
+        if (light != null)
+        {
             GameObject actorObj = light.fixture.CheckForObjectInLight();
             if (actorObj != null && actorObj.GetComponent<ActorBehavior>() == actor && light.point == actor.Request)
             {
@@ -121,8 +127,6 @@ public class PuzzleManager : MonoBehaviour
             Debug.Log("Fail: No More Programmed Lights");
             // Fail
         }
-
-        yield return new WaitWhile(() => actor.IsMoving);
 
         yield return new WaitForSeconds(1f);
 

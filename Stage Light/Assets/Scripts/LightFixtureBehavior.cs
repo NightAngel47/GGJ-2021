@@ -91,6 +91,7 @@ public class LightFixtureBehavior : MonoBehaviour
 
     public GameObject CheckForObjectInLight()
     {
+        Debug.DrawRay(transform.position, transform.up * 10, Color.blue, 5f, false);
         RaycastHit2D hitObj = Physics2D.Raycast(transform.position, transform.up);
 
         if (hitObj.collider == null)

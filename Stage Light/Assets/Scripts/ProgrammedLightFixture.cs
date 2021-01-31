@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public struct ProgrammedLightFixture
+public class ProgrammedLightFixture
 {
     public LightFixtureBehavior fixture;
     public StagePoint point;
