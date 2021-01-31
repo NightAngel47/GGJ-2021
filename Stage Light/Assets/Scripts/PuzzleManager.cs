@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -20,8 +21,10 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private LightFixtureDisplay lightControls = null;
     [SerializeField] private Light2D globalLight;
     [SerializeField, MinMaxSlider(0, 1)] private Vector2 houseLightIntensity;
-    [SerializeField, Range(0.1f, 2f)] private float sceneStartDelay = 0.5f;
-    private GameObject uiControls;
+    [SerializeField] private GameObject uiControls;
+    [SerializeField] private GameObject popupBackground;
+    private enum PopupPanelType { DryRun, Success, Fail, MainMenu}
+    [SerializeField] private List<GameObject> popupPanels = new List<GameObject>();
 
     [Space]
 
@@ -37,9 +40,12 @@ public class PuzzleManager : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        foreach (Vector3 point in CurrentSceneData.Positions)
+        if (CurrentSceneData != null)
         {
-            Gizmos.DrawWireSphere(point, 0.5f);
+            foreach (Vector3 point in CurrentSceneData.Positions)
+            {
+                Gizmos.DrawWireSphere(point, 0.5f);
+            }
         }
     }
 
@@ -51,7 +57,13 @@ public class PuzzleManager : MonoBehaviour
             Destroy(gameObject);
 
         globalLight.intensity = houseLightIntensity.y;
-        uiControls = FindObjectOfType<Canvas>().gameObject;
+        
+        // hide popup Ui
+        for (int i = 0; i < popupBackground.transform.childCount; ++i)
+        {
+            popupBackground.transform.GetChild(i).gameObject.SetActive(false);
+        }
+        popupBackground.transform.gameObject.SetActive(false);
 
         //SelectedFixtureChanged.RemoveAllListeners();
     }
@@ -61,13 +73,17 @@ public class PuzzleManager : MonoBehaviour
         ActorsInScene = new List<ActorBehavior>(FindObjectsOfType<ActorBehavior>());
 
         SetCurrentPuzzle();
-        uiControls.SetActive(false);
     }
 
     private void OnDestroy()
     {
         if (Instance == this)
             Instance = null;
+    }
+
+    public void ChangeScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 
     public void SetCurrentPuzzle()
@@ -81,13 +97,22 @@ public class PuzzleManager : MonoBehaviour
 
         ProgrammedLights = new Queue<ProgrammedLightFixture>();
 
-        Invoke(nameof(StartDryRun), sceneStartDelay);
+        // show initial dry run popup
+        popupBackground.transform.gameObject.SetActive(true);
+        popupPanels[(int)PopupPanelType.DryRun].SetActive(true);
     }
 
     public void SetNextPuzzle()
     {
-        currentDataIndex = currentDataIndex < sceneData.Count ? currentDataIndex + 1 : 0;
-        SetCurrentPuzzle();
+        if (currentDataIndex < sceneData.Count)
+        {
+            currentDataIndex = currentDataIndex + 1;
+            SetCurrentPuzzle();
+        }
+        else
+        {
+            ChangeScene("FinishScreen");
+        }
     }
 
     public void NewSelectedFixture(int indexOfDataList)
@@ -218,7 +243,19 @@ public class PuzzleManager : MonoBehaviour
             if (canSucceed)
             {
                 globalLight.intensity = houseLightIntensity.y;
-                SetNextPuzzle();
+                
+                // show success popup
+                popupBackground.transform.gameObject.SetActive(true);
+                popupPanels[(int)PopupPanelType.Success].SetActive(true);
+                
+                // Called by popup
+                //SetNextPuzzle();
+            }
+            else
+            {
+                // show fail popup
+                popupBackground.transform.gameObject.SetActive(true);
+                popupPanels[(int)PopupPanelType.Fail].SetActive(true);
             }
         }
     }
