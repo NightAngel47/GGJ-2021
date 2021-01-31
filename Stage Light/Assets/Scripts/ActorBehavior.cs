@@ -63,6 +63,6 @@ public class ActorBehavior : MonoBehaviour
     public void SetRequest(StagePoint request)
     {
         this.request = request;
-        speechBubble.transform.GetComponentInChildren<SpriteRenderer>().color = this.request.color;
+        speechBubble.transform.GetChild(0).GetComponent<SpriteRenderer>().color = this.request.color;
     }
 }
