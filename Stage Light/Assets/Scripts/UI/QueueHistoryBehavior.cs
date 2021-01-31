@@ -19,6 +19,7 @@ public class QueueHistoryBehavior : MonoBehaviour
         PuzzleManager.NewLightQueued.AddListener((programmedLight) => AddElement(programmedLight.fixture.transform.GetSiblingIndex(), programmedLight.point.positionIndex, programmedLight.point.color));
         PuzzleManager.FirstLightDequeued.AddListener(() => RemoveFirstElement());
         PuzzleManager.LastLightUnqueued.AddListener(() => RemoveLastElement());
+        PuzzleManager.ClearQueue.AddListener(() => ClearHistory());
     }
 
     private void OnDisable()
@@ -26,6 +27,7 @@ public class QueueHistoryBehavior : MonoBehaviour
         PuzzleManager.NewLightQueued.RemoveListener((programmedLight) => AddElement(programmedLight.fixture.transform.GetSiblingIndex(), programmedLight.point.positionIndex, programmedLight.point.color));
         PuzzleManager.FirstLightDequeued.RemoveListener(() => RemoveFirstElement());
         PuzzleManager.LastLightUnqueued.RemoveListener(() => RemoveLastElement());
+        PuzzleManager.ClearQueue.RemoveListener(() => ClearHistory());
     }
 
     private void Start()
@@ -75,5 +77,13 @@ public class QueueHistoryBehavior : MonoBehaviour
 
         if (contentTransform.childCount == 0)
             undoButton.interactable = false;
+    }
+
+    private void ClearHistory()
+    {
+        for (int index = contentTransform.childCount - 1; index >= 0; index--)
+        {
+            Destroy(contentTransform.GetChild(index).gameObject);
+        }
     }
 }
