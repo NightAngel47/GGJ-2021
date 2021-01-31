@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43beafa8-1f03-47d6-9392-a2993f35a1a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StageScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StageScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stage Light/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stage Light/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stage Light/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stage Light/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PuzzleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PuzzleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +17,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MainMenuBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/80B809E7-A5F3-4A79-ADA2-AF5F9FB0F186/75/1dc41693/Canvas.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LightPositionDisplay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8F894FE8-B7FF-4AF7-979C-06AF04D3E5A5/14/99650745/NativeInputSystem.cs" root0="SKIP_HIGHLIGHTING" />
@@ -22,9 +26,10 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/LightPositionDisplay.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/LightFixtureBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LightColorDisplay.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/LightFixtureBehavior.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MainMenuBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PuzzleManager.cs" />
     </changedPaths>
   </component>

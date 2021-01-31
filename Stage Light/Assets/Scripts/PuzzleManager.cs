@@ -20,6 +20,7 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private LightFixtureDisplay lightControls = null;
     [SerializeField] private Light2D globalLight;
     [SerializeField, MinMaxSlider(0, 1)] private Vector2 houseLightIntensity;
+    [SerializeField, Range(0.1f, 2f)] private float sceneStartDelay = 0.5f;
     private GameObject uiControls;
 
     [Space]
@@ -49,6 +50,7 @@ public class PuzzleManager : MonoBehaviour
         else if (Instance != this)
             Destroy(gameObject);
 
+        globalLight.intensity = houseLightIntensity.y;
         uiControls = FindObjectOfType<Canvas>().gameObject;
 
         //SelectedFixtureChanged.RemoveAllListeners();
@@ -59,6 +61,8 @@ public class PuzzleManager : MonoBehaviour
         ActorsInScene = new List<ActorBehavior>(FindObjectsOfType<ActorBehavior>());
 
         SetCurrentPuzzle();
+        uiControls.SetActive(false);
+        Invoke(nameof(StartDryRun), sceneStartDelay);
     }
 
     private void OnDestroy()
