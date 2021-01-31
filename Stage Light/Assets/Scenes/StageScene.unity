@@ -4362,52 +4362,8 @@ PrefabInstance:
       value: Light Fixture - 0
       objectReference: {fileID: 0}
     - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
-      propertyPath: possibleColor.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
       propertyPath: possiblePositions.Array.size
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
-      propertyPath: possibleColor.Array.data[0].b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
-      propertyPath: possibleColor.Array.data[0].g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
-      propertyPath: possibleColor.Array.data[0].r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
-      propertyPath: possibleColor.Array.data[1].a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
-      propertyPath: possibleColor.Array.data[1].b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
-      propertyPath: possibleColor.Array.data[1].g
-      value: 0.08090782
-      objectReference: {fileID: 0}
-    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
-      propertyPath: possibleColor.Array.data[1].r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
-      propertyPath: possibleColor.Array.data[2].a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
-      propertyPath: possibleColor.Array.data[2].b
-      value: 0.17926908
-      objectReference: {fileID: 0}
-    - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
-      propertyPath: possibleColor.Array.data[2].g
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4640391808810694706, guid: 2efb18927b2285442805d724ac691632, type: 3}
       propertyPath: possiblePositions.Array.data[1]

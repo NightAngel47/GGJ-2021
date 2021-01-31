@@ -12,6 +12,7 @@
           <e p="LightFixtureBehavior.cs" t="Include" />
           <e p="LightFixtureDisplay.cs" t="Include" />
           <e p="LightPositionDisplay.cs" t="Include" />
+          <e p="ProgrammedLightFixture.cs" t="Include" />
           <e p="PuzzleManager.cs" t="Include" />
           <e p="SceneData.cs" t="Include" />
           <e p="StagePoint.cs" t="Include" />
