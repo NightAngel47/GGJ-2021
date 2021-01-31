@@ -13,6 +13,7 @@ public class PuzzleManager : MonoBehaviour
     public static UnityEventProgrammedLightFixture NewLightQueued = new UnityEventProgrammedLightFixture();
     public static UnityEvent FirstLightDequeued = new UnityEvent();
     public static UnityEvent LastLightUnqueued = new UnityEvent();
+    public static UnityEvent ClearQueue = new UnityEvent();
     public static LightFixtureBehavior SelectedFixture { get; private set; } = null;
 
     [SerializeField] private Transform lightsParent = null;
@@ -196,6 +197,7 @@ public class PuzzleManager : MonoBehaviour
         else
         {
             globalLight.intensity = houseLightIntensity.y;
+            ClearQueue?.Invoke();
         }
     }
 
