@@ -23,7 +23,8 @@ public class PuzzleManager : MonoBehaviour
 
     private int currentActorIndex = 0;
     public List<ActorBehavior> ActorsInScene { get; private set; }
-    public Queue<StagePoint> requests;
+    public Queue<StagePoint> Requests { get; private set; }
+    public Queue<ProgrammedLightFixture> ProgrammedLights { get; private set; }
 
     private void OnDrawGizmos()
     {
@@ -64,6 +65,8 @@ public class PuzzleManager : MonoBehaviour
         }
         lightControls.UpdateSliderMax(CurrentSceneData.LightIndexes.Count - 1);
         SelectedFixtureChanged?.Invoke(0);
+
+        ProgrammedLights = new Queue<ProgrammedLightFixture>();
     }
 
     public void NewSelectedFixture(int indexOfDataList)
@@ -72,25 +75,56 @@ public class PuzzleManager : MonoBehaviour
         SelectedFixtureChanged?.Invoke(CurrentSceneData.LightIndexes[indexOfDataList]);
     }
 
+    public void QueueSelectedLight()
+    {
+        ProgrammedLights.Enqueue(new ProgrammedLightFixture(SelectedFixture, SelectedFixture.CurrentPoint));
+    }
+
     [Button("Start Scene")]
     public void StartScene()
     {
-        requests = new Queue<StagePoint>(CurrentSceneData.RequestsForScene);
+        Requests = new Queue<StagePoint>(CurrentSceneData.RequestsForScene);
 
         StartCoroutine(ContinueSceneSequence());
     }
 
     private IEnumerator ContinueSceneSequence()
     {
-        ActorBehavior actor = GetCurrentActor(requests.Dequeue());
+        ActorBehavior actor = GetCurrentActor(Requests.Dequeue());
         actor.MoveOnStage();
 
         yield return new WaitWhile(() => actor.IsMoving);
+
+        if (ProgrammedLights.Count != 0)
+        {
+            ProgrammedLightFixture light = ProgrammedLights.Dequeue();
+            light.fixture.UpdatePosition(light.point.positionIndex);
+            // Shape
+            light.fixture.UpdateColor(light.fixture.PossibleColors.IndexOf(light.point.color));
+
+            GameObject actorObj = light.fixture.CheckForObjectInLight();
+            if (actorObj != null && actorObj.GetComponent<ActorBehavior>() == actor && light.point == actor.Request)
+            {
+                Debug.Log("Success");
+                // Success
+            }
+            else
+            {
+                Debug.Log("Fail: Doesn't Match");
+                // Fail
+            }
+        }
+        else
+        {
+            Debug.Log("Fail: No More Programmed Lights");
+            // Fail
+        }
+
         yield return new WaitForSeconds(1f);
 
         actor.MoveOffStage();
 
-        if (requests.Count != 0)
+        if (Requests.Count != 0)
             StartCoroutine(ContinueSceneSequence());
     }
 
