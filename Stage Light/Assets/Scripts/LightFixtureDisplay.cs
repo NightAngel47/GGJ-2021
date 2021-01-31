@@ -5,14 +5,13 @@ using UnityEngine.UI;
 
 public class LightFixtureDisplay : MonoBehaviour
 {
-    private TMP_Text textDisplay = null;
+    [SerializeField] private TMP_Text textDisplay = null;
     private Slider slider = null;
 
     private int previousValue = -1;
 
     private void Awake()
     {
-        textDisplay = GetComponentInChildren<TMP_Text>();
         slider = GetComponentInChildren<Slider>();
 
         UpdateDisplay();
@@ -22,6 +21,14 @@ public class LightFixtureDisplay : MonoBehaviour
     {
         if (previousValue != (int)slider.value)
             UpdateDisplay();
+    }
+
+    public void ShowOrHideContent(bool show)
+    {
+        for (int index = 0; index < transform.childCount; index++)
+        {
+            transform.GetChild(index).gameObject.SetActive(show);
+        }
     }
 
     public void UpdateDisplay()

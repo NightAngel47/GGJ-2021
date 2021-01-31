@@ -22,15 +22,28 @@ public class LightColorDisplay : MonoBehaviour
         PuzzleManager.SelectedFixtureChanged.AddListener(UpdateSliderData);
     }
 
+    private void OnDisable()
+    {
+        PuzzleManager.SelectedFixtureChanged.RemoveListener(UpdateSliderData);
+    }
+
+    private void Start()
+    {
+        ShowOrHideContent(false);
+    }
+
     private void LateUpdate()
     {
         if (previousValue != (int)slider.value)
             UpdateDisplay();
     }
-    
-    private void OnDisable()
+
+    public void ShowOrHideContent(bool show)
     {
-        PuzzleManager.SelectedFixtureChanged.RemoveListener(UpdateSliderData);
+        for (int index = 0; index < transform.childCount; index++)
+        {
+            transform.GetChild(index).gameObject.SetActive(show);
+        }
     }
 
     private void UpdateSliderData(int newIndex)

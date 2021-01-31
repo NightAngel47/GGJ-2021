@@ -7,13 +7,14 @@ using UnityEngine.UI;
 
 public class LightPositionDisplay : MonoBehaviour
 {
+    [SerializeField] private Transform numpad = null;
     private readonly List<Button> numpadButtons = new List<Button>();
 
     private void Awake()
     {
-        for(int i = 0; i < transform.GetChild(0).childCount; ++i)
+        for(int i = 0; i < numpad.childCount; ++i)
         {
-            numpadButtons.Add(transform.GetChild(0).GetChild(i).GetComponent<Button>());
+            numpadButtons.Add(numpad.GetChild(i).GetComponent<Button>());
         }
     }
 
@@ -26,6 +27,19 @@ public class LightPositionDisplay : MonoBehaviour
         PuzzleManager.SelectedFixtureChanged.RemoveListener(UpdateControlsForSelectedLight);
     }
 
+    private void Start()
+    {
+        ShowOrHideContent(false);
+    }
+
+    public void ShowOrHideContent(bool show)
+    {
+        for (int index = 0; index < transform.childCount; index++)
+        {
+            transform.GetChild(index).gameObject.SetActive(show);
+        }
+    }
+
     private void UpdateControlsForSelectedLight(int newIndex)
     {
         // reset buttons to not interactable
@@ -33,7 +47,7 @@ public class LightPositionDisplay : MonoBehaviour
         {
             button.interactable = false;
         }
-        
+
         // disable buttons that don't match this light's stuff
         LightFixtureBehavior selected = PuzzleManager.SelectedFixture;
         for(int i = 0; i < numpadButtons.Count; ++i)

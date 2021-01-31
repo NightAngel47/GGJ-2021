@@ -10,6 +10,8 @@ public class PuzzleManager : MonoBehaviour
 {
     public static PuzzleManager Instance { get; private set; } = null;
     public static UnityEventInt SelectedFixtureChanged = new UnityEventInt();
+    public static UnityEventProgrammedLightFixture NewLightQueued = new UnityEventProgrammedLightFixture();
+    public static UnityEvent LastLightUnqueued = new UnityEvent();
     public static LightFixtureBehavior SelectedFixture { get; private set; } = null;
 
     [SerializeField] private Transform lightsParent = null;
@@ -80,7 +82,21 @@ public class PuzzleManager : MonoBehaviour
 
     public void QueueSelectedLight()
     {
+        ProgrammedLightFixture programmedLight = new ProgrammedLightFixture(SelectedFixture, SelectedFixture.CurrentPoint);
         ProgrammedLights.Enqueue(new ProgrammedLightFixture(SelectedFixture, SelectedFixture.CurrentPoint));
+        NewLightQueued?.Invoke(programmedLight);
+
+    }
+
+    public void UndoLastQueued()
+    {
+        ProgrammedLightFixture[] array = ProgrammedLights.ToArray();
+        ProgrammedLights.Clear();
+        for (int index = 0; index < array.Length - 1; index++)
+        {
+            ProgrammedLights.Enqueue(array[index]);
+        }
+        LastLightUnqueued?.Invoke();
     }
 
     public void StartDryRun()
@@ -191,3 +207,6 @@ public class PuzzleManager : MonoBehaviour
 
 [Serializable]
 public class UnityEventInt : UnityEvent<int> { }
+
+[Serializable]
+public class UnityEventProgrammedLightFixture : UnityEvent<ProgrammedLightFixture> { }
