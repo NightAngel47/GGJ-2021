@@ -86,7 +86,6 @@ public class PuzzleManager : MonoBehaviour
 
     public void SetNextPuzzle()
     {
-        Debug.Log(currentDataIndex < sceneData.Count ? currentDataIndex + 1 : 0);
         currentDataIndex = currentDataIndex < sceneData.Count ? currentDataIndex + 1 : 0;
         SetCurrentPuzzle();
     }
@@ -99,11 +98,9 @@ public class PuzzleManager : MonoBehaviour
 
     public void QueueSelectedLight()
     {
-        Debug.Log(1);
         ProgrammedLightFixture programmedLight = new ProgrammedLightFixture(SelectedFixture, SelectedFixture.CurrentPoint);
         ProgrammedLights.Enqueue(new ProgrammedLightFixture(SelectedFixture, SelectedFixture.CurrentPoint));
         NewLightQueued?.Invoke(programmedLight);
-        Debug.Log(3);
 
     }
 

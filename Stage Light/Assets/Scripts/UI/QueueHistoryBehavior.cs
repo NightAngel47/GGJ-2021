@@ -38,7 +38,6 @@ public class QueueHistoryBehavior : MonoBehaviour
 
     private void AddElement(int fixtureIndex, int positionIndex, Color color)
     {
-        Debug.Log(2);
         contentTransform.sizeDelta = new Vector2(contentTransform.rect.width + ElementWidth, 0f);
         GameObject newElement = Instantiate<GameObject>(historyElement, contentTransform);
         newElement.GetComponent<RectTransform>().localPosition = new Vector3(ElementWidth * (contentTransform.childCount - 1), 0f);
