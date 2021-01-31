@@ -11,6 +11,7 @@ public class PuzzleManager : MonoBehaviour
     public static PuzzleManager Instance { get; private set; } = null;
     public static UnityEventInt SelectedFixtureChanged = new UnityEventInt();
     public static UnityEventProgrammedLightFixture NewLightQueued = new UnityEventProgrammedLightFixture();
+    public static UnityEvent FirstLightDequeued = new UnityEvent();
     public static UnityEvent LastLightUnqueued = new UnityEvent();
     public static LightFixtureBehavior SelectedFixture { get; private set; } = null;
 
@@ -154,6 +155,8 @@ public class PuzzleManager : MonoBehaviour
             light.fixture.UpdatePosition(light.point.positionIndex);
             // Shape
             light.fixture.UpdateColor(light.fixture.PossibleColors.IndexOf(light.point.color));
+
+            FirstLightDequeued?.Invoke();
         }
 
         yield return new WaitWhile(() => actor.IsMoving);
