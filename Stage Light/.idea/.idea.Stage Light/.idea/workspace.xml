@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43beafa8-1f03-47d6-9392-a2993f35a1a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Stage Light/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Stage Light/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StageScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StageScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PuzzleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PuzzleManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,11 +22,11 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/PuzzleManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LightPositionDisplay.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LightFixtureBehavior.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/LightColorDisplay.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/SceneData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PuzzleManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nnyHg786nASetdoLzG4flf3LQe" />
@@ -42,19 +44,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="2304">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="2304" />
+      <option name="pid" />
       <option name="selectedOptions">
         <list />
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="2304">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="2304" />
+      <option name="pid" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -70,6 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1612040067153</updated>
       <workItem from="1612040073993" duration="12397000" />
+      <workItem from="1612066057310" duration="650000" />
     </task>
     <servers />
   </component>

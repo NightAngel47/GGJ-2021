@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class PuzzleManager : MonoBehaviour
 
     [SerializeField] private Transform lightsParent = null;
     [SerializeField] private LightFixtureDisplay lightControls = null;
+    [SerializeField] private Light2D globalLight;
+    [SerializeField, MinMaxSlider(0, 1)] private Vector2 houseLightIntensity;
 
     [Space]
 
@@ -80,16 +83,48 @@ public class PuzzleManager : MonoBehaviour
         ProgrammedLights.Enqueue(new ProgrammedLightFixture(SelectedFixture, SelectedFixture.CurrentPoint));
     }
 
-    [Button("Start Scene")]
-    public void StartScene()
+    [Button("Dry Run")]
+    public void StartDryRun()
     {
         Requests = new Queue<StagePoint>(CurrentSceneData.RequestsForScene);
 
-        StartCoroutine(ContinueSceneSequence());
+        StartCoroutine(DryRunSequence());
     }
 
-    private IEnumerator ContinueSceneSequence()
+    public void StartPerformance()
     {
+        Requests = new Queue<StagePoint>(CurrentSceneData.RequestsForScene);
+
+        StartCoroutine(PerformanceSequence());
+    }
+
+    private IEnumerator DryRunSequence()
+    {
+        globalLight.intensity = houseLightIntensity.y;
+        ActorBehavior actor = GetCurrentActor(Requests.Dequeue());
+        actor.MoveOnStage();
+
+        yield return new WaitWhile(() => actor.IsMoving);
+
+        yield return new WaitForSeconds(1f);
+
+        actor.MoveOffStage();
+
+        yield return new WaitWhile(() => actor.IsMoving);
+
+        if (Requests.Count != 0)
+        {
+            StartCoroutine(DryRunSequence());
+        }
+        else
+        {
+            globalLight.intensity = houseLightIntensity.x;
+        }
+    }
+
+    private IEnumerator PerformanceSequence()
+    {
+        globalLight.intensity = houseLightIntensity.x;
         ActorBehavior actor = GetCurrentActor(Requests.Dequeue());
         actor.MoveOnStage();
 
@@ -135,7 +170,13 @@ public class PuzzleManager : MonoBehaviour
         yield return new WaitWhile(() => actor.IsMoving);
 
         if (Requests.Count != 0)
-            StartCoroutine(ContinueSceneSequence());
+        {
+            StartCoroutine(PerformanceSequence());
+        }
+        else
+        {
+            globalLight.intensity = houseLightIntensity.y;
+        }
     }
 
     public ActorBehavior GetCurrentActor(StagePoint request)
