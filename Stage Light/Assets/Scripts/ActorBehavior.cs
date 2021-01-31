@@ -13,6 +13,7 @@ public class ActorBehavior : MonoBehaviour
     private Vector3 targetPoint = Vector3.zero;
     private bool isMoving = false;
     private float lerpStep = 0f;
+    private GameObject speechBubble;
 
     public StagePoint Request => request;
     public bool IsMoving => isMoving;
@@ -20,6 +21,8 @@ public class ActorBehavior : MonoBehaviour
     private void Awake()
     {
         offstagePoint = transform.position;
+        speechBubble = transform.GetChild(1).gameObject;
+        speechBubble.SetActive(false);
     }
 
     private void Update()
@@ -45,14 +48,21 @@ public class ActorBehavior : MonoBehaviour
     [Button("Off Stage")]
     public void MoveOffStage()
     {
+        speechBubble.SetActive(false);
         lerpStep = 0f;
         startPoint = PuzzleManager.Instance.CurrentSceneData.Positions[request.positionIndex];
         targetPoint = offstagePoint;
         isMoving = true;
     }
 
+    public void DisplayRequest()
+    {
+        speechBubble.SetActive(true);
+    }
+
     public void SetRequest(StagePoint request)
     {
         this.request = request;
+        speechBubble.transform.GetChild(0).GetComponent<SpriteRenderer>().color = this.request.color;
     }
 }

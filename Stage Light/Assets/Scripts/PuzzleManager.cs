@@ -122,6 +122,8 @@ public class PuzzleManager : MonoBehaviour
         actor.MoveOnStage();
 
         yield return new WaitWhile(() => actor.IsMoving);
+        
+        actor.DisplayRequest();
 
         yield return new WaitForSeconds(1f);
 
