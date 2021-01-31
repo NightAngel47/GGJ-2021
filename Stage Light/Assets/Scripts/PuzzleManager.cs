@@ -96,6 +96,10 @@ public class PuzzleManager : MonoBehaviour
         if (ProgrammedLights.Count != 0)
         {
             ProgrammedLightFixture light = ProgrammedLights.Dequeue();
+
+            SelectedFixture = light.fixture;
+            SelectedFixtureChanged?.Invoke(light.fixture.transform.GetSiblingIndex());
+
             light.fixture.UpdatePosition(light.point.positionIndex);
             // Shape
             light.fixture.UpdateColor(light.fixture.PossibleColors.IndexOf(light.point.color));
