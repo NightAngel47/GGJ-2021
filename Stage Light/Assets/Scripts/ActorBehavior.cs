@@ -14,6 +14,8 @@ public class ActorBehavior : MonoBehaviour
     private bool isMoving = false;
     private float lerpStep = 0f;
 
+    public bool IsMoving => isMoving;
+
     private void Awake()
     {
         offstagePoint = transform.position;

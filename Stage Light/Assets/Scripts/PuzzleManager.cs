@@ -1,5 +1,6 @@
 using NaughtyAttributes;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -20,9 +21,17 @@ public class PuzzleManager : MonoBehaviour
 
     public SceneData CurrentSceneData => sceneData[currentDataIndex];
 
-    private int currentRequest = 0;
     private int currentActorIndex = 0;
     public List<ActorBehavior> ActorsInScene { get; private set; }
+    public Queue<StagePoint> requests;
+
+    private void OnDrawGizmos()
+    {
+        foreach (Vector3 point in CurrentSceneData.Positions)
+        {
+            Gizmos.DrawWireSphere(point, 0.5f);
+        }
+    }
 
     private void Awake()
     {
@@ -66,10 +75,23 @@ public class PuzzleManager : MonoBehaviour
     [Button("Start Scene")]
     public void StartScene()
     {
-        ActorBehavior actor = GetCurrentActor(CurrentSceneData.RequestsForScene[0]);
+        requests = new Queue<StagePoint>(CurrentSceneData.RequestsForScene);
+
+        StartCoroutine(ContinueSceneSequence());
+    }
+
+    private IEnumerator ContinueSceneSequence()
+    {
+        ActorBehavior actor = GetCurrentActor(requests.Dequeue());
         actor.MoveOnStage();
 
-        currentRequest = 1;
+        yield return new WaitWhile(() => actor.IsMoving);
+        yield return new WaitForSeconds(1f);
+
+        actor.MoveOffStage();
+
+        if (requests.Count != 0)
+            StartCoroutine(ContinueSceneSequence());
     }
 
     public ActorBehavior GetCurrentActor(StagePoint request)
@@ -80,14 +102,6 @@ public class PuzzleManager : MonoBehaviour
         currentActorIndex = currentActorIndex + 1 != ActorsInScene.Count ? currentActorIndex + 1 : 0;
 
         return actor;
-    }
-
-    private void OnDrawGizmos()
-    {
-        foreach (Vector3 point in CurrentSceneData.Positions)
-        {
-            Gizmos.DrawWireSphere(point, 0.5f);
-        }
     }
 }
 
