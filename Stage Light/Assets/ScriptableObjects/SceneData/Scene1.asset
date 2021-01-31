@@ -25,10 +25,10 @@ MonoBehaviour:
   requestsForScene:
   - positionIndex: 1
     shape: 0
-    color: {r: 0, g: 0.8, b: 1, a: 0.5019608}
+    color: {r: 0, g: 0.35686275, b: 0.6, a: 1}
   - positionIndex: 2
     shape: 0
-    color: {r: 1, g: 0.1641509, b: 0.4404063, a: 0.5019608}
+    color: {r: 0.47450984, g: 0.28627452, b: 0.5411765, a: 1}
   - positionIndex: 0
     shape: 0
-    color: {r: 0.92762524, g: 0.9622642, b: 0.34859377, a: 0.5019608}
+    color: {r: 0.9725491, g: 0.15294118, b: 0.20784315, a: 1}
