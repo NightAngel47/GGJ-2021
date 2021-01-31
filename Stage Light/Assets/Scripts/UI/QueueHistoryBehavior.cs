@@ -86,6 +86,7 @@ public class QueueHistoryBehavior : MonoBehaviour
         {
             Destroy(contentTransform.GetChild(index).gameObject);
         }
+        contentTransform.sizeDelta = Vector2.zero;
         undoButton.interactable = false;
     }
 }
