@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43beafa8-1f03-47d6-9392-a2993f35a1a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Light Fixture.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Light Fixture.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/StageScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StageScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PuzzleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PuzzleManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/find your light sprite sheet final maybe.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/find your light sprite sheet final maybe.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

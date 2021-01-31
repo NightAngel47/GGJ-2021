@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsSelectedObject: {fileID: 6015200107255421056}
+  lensSprite: {fileID: 6277632457546863414}
   currentPoint:
     positionIndex: 0
     shape: 0

@@ -9,6 +9,7 @@ using UnityEngine.Experimental.Rendering.Universal;
 public class LightFixtureBehavior : MonoBehaviour
 {
     [SerializeField] private GameObject IsSelectedObject;
+    [SerializeField] private SpriteRenderer lensSprite;
 
     [SerializeField] private StagePoint currentPoint;
 
@@ -74,6 +75,7 @@ public class LightFixtureBehavior : MonoBehaviour
     {
         currentPoint.color = possibleColor[colorIndex];
         pointLight.color = currentPoint.color;
+        lensSprite.color = currentPoint.color;
     }
 
     private void MoveLight()

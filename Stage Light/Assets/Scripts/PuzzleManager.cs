@@ -20,6 +20,7 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private LightFixtureDisplay lightControls = null;
     [SerializeField] private Light2D globalLight;
     [SerializeField, MinMaxSlider(0, 1)] private Vector2 houseLightIntensity;
+    private GameObject uiControls;
 
     [Space]
 
@@ -47,6 +48,8 @@ public class PuzzleManager : MonoBehaviour
             Instance = this;
         else if (Instance != this)
             Destroy(gameObject);
+
+        uiControls = FindObjectOfType<Canvas>().gameObject;
 
         //SelectedFixtureChanged.RemoveAllListeners();
     }
@@ -117,6 +120,7 @@ public class PuzzleManager : MonoBehaviour
 
     private IEnumerator DryRunSequence()
     {
+        uiControls.SetActive(false);
         globalLight.intensity = houseLightIntensity.y;
         ActorBehavior actor = GetCurrentActor(Requests.Dequeue());
         actor.MoveOnStage();
@@ -137,12 +141,14 @@ public class PuzzleManager : MonoBehaviour
         }
         else
         {
+            uiControls.SetActive(true);
             globalLight.intensity = houseLightIntensity.x;
         }
     }
 
     private IEnumerator PerformanceSequence()
     {
+        uiControls.SetActive(false);
         globalLight.intensity = houseLightIntensity.x;
         ActorBehavior actor = GetCurrentActor(Requests.Dequeue());
         actor.MoveOnStage();
@@ -196,6 +202,7 @@ public class PuzzleManager : MonoBehaviour
         }
         else
         {
+            uiControls.SetActive(true);
             globalLight.intensity = houseLightIntensity.y;
             ClearQueue?.Invoke();
         }
